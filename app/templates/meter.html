@@ -1,0 +1,82 @@
+{% block body %}
+
+<div class="row" data-ref="sensor_list">
+
+        <div class="col-lg-2 col-sm-4 col-sm-6 col-xs-12">
+            <div class="panel panel-default" data-ref="has_warning">
+                <div class="panel-heading clearfix">
+                    <h6 class="panel-title pull-left" data-ref="description" style="color: #fff; word-wrap: break-word;"></h6>
+
+                    <div class="btn-group pull-right" style="z-index: 9999; margin-left: -75px;">
+                        <button data-ref="show_gauge_button" type="button" class="btn btn-default fa fa-tachometer"></button>
+                        <button data-ref="show_chart_button" type="button" class="btn btn-default fa fa-line-chart"></button>
+                        <a href="#" data-ref="enable_warnings_bell" class="btn btn-default fa"></a>
+                    </div>
+                </div>
+
+                <div class="hidden-xs" data-ref="gauge" style="height: 200px;margin: 0 auto;">
+
+                </div>
+
+                <div class="hidden-xs hidden-sm" data-ref="chart" style="height: 300px;margin: 0 auto;">
+
+                </div>
+
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12 clearfix">
+                            <h6 class="pull-left" data-ref="value"></h6>
+                            <h6><small class="pull-right" data-ref="read_ts"> </small></h6>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="input-group">
+                                <span class="input-group-addon" style="color: #fff; padding-left: 6px; padding-right: 6px;">Min</span>
+                                <input type="number" step="any" class="form-control" data-ref="min_warning_input">
+                                <span class="input-group-addon" style="color: #fff; padding-left: 6px; padding-right: 6px;" data-ref="min_warning_value"></span>
+                                <span class="input-group-addon" style="color: #fff; padding-left: 6px; padding-right: 6px;">Max</span>
+                                <input type="number" step="any" class="form-control" data-ref="max_warning_input">
+                                <span class="input-group-addon" style="color: #fff; padding-left: 6px; padding-right: 6px;" data-ref="max_warning_value"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12" data-ref="enable_form">
+                            <form>
+                                <div class="form">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" data-ref="enable_warnings"> {{ _('Enable warnings') }}
+                                        </label>
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label>{{ _('Observable measurements') }}</label>
+                                        <input type="number" step="1" min="1" data-ref="observable_measurements" class="form-control">
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label>{{ _('Observable alarming measurements') }}</label>
+                                        <input type="number" step="1" min="1" data-ref="observable_alarming_measurements" class="form-control">
+                                    </div>
+                                    <div class="form-group-sm">
+                                        <label>{{ _('Warning wait minutes') }}</label>
+                                        <input type="number" step="1" min="1" data-ref="warning_wait_minutes" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-xs-12" data-ref="open_edit">
+                            <button type="button" class="btn btn-default btn-sm btn-block">{{ _('Edit limits') }}</button>
+                        </div>
+                        <div class="col-xs-6" data-ref="confirm_edit">
+                            <button type="button" class="btn btn-success btn-sm btn-block">{{ _('Confirm') }}</button>
+                        </div>
+                        <div class="col-xs-6" data-ref="cancel_edit">
+                            <button type="button" class="btn btn-warning btn-sm btn-block">{{ _('Cancel') }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</div>
+{% endblock %}

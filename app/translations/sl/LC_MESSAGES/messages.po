@@ -1,0 +1,122 @@
+# Slovenian translations for PROJECT.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-01-11 16:53+0100\n"
+"PO-Revision-Date: 2015-01-11 16:54+0100\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: sl <LL@li.org>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 "
+"|| n%100==4 ? 2 : 3)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: app/templates/meter.html:48
+msgid "Enable warnings"
+msgstr "Omogoči opozorila"
+
+#: app/templates/meter.html:52
+msgid "Observable measurements"
+msgstr "Št. opazovanih meritev"
+
+#: app/templates/meter.html:56
+msgid "Observable alarming measurements"
+msgstr "Št. opozorilnih vrednosti"
+
+#: app/templates/meter.html:60
+msgid "Warning wait minutes"
+msgstr "Čas med opozorili (št. minut)"
+
+#: app/templates/meter.html:68
+msgid "Edit limits"
+msgstr "Uredi opozorilne vrednosti"
+
+#: app/templates/meter.html:71
+msgid "Confirm"
+msgstr "Potrdi"
+
+#: app/templates/meter.html:74
+msgid "Cancel"
+msgstr "Prekliči"
+
+#: app/templates/navigation.html:6
+msgid "Toggle navigation"
+msgstr ""
+
+msgid "Edit"
+msgstr "Uredi"
+
+#: app/templates/navigation.html:15
+msgid "Dashboard"
+msgstr "Nadzorna plošča"
+
+#: app/templates/navigation.html:26
+msgid "Log out"
+msgstr "Odjava"
+
+#: app/templates/notifications.html:8
+msgid "Notifications"
+msgstr "Opozorila"
+
+#: app/templates/relays.html:8
+msgid "Relays"
+msgstr "Stikala"
+
+#: app/templates/relays.html:10
+msgid "Unlocked"
+msgstr "Odklenjeno"
+
+#: app/templates/relays.html:10
+msgid "Locked"
+msgstr "Zaklenjeno"
+
+#: app/templates/auth/login.html:4
+msgid "Sign In"
+msgstr "Prijava"
+
+msgid "Setup"
+msgstr "Nastavitve"
+
+msgid "Invalid username or password."
+msgstr "Neveljavno uporabniško ime ali geslo."
+
+msgid "You have been logged out."
+msgstr "Bili ste odjavljeni"
+
+msgid "Please log in to access this page."
+msgstr "Prosimo, prijavite se za dostop do te strani"
+
+msgid "Warning wait minutes"
+msgstr "Čas med opozorili"
+
+msgid "History"
+msgstr "Zgodovina"
+
+msgid "Email/Username"
+msgstr "Email/Uporabniško ime"
+
+msgid "Password"
+msgstr "Geslo"
+
+msgid "Keep me logged in"
+msgstr "Zapomni si me"
+
+msgid "Enable charts"
+msgstr "Omogoči grafe"
+
+msgid "Log In"
+msgstr "Prijava"
+
+msgid "Last warning phone call was at"
+msgstr "Zadnji izvedeni klic"
+
+msgid "Warning calls will be enabled after"
+msgstr "Opozorilni klic bo omogočen po"

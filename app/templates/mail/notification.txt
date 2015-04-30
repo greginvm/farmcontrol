@@ -1,0 +1,13 @@
+
+Warnings:
+{% for warning in warnings %}
+    {{ warning.sensor.description }}: {{ warning.value }} {{ warning.sensor.type.unit }},
+        MIN/MAX: {{ warning.sensor.min_warning_value }}/{{ warning.sensor.max_warning_value }}
+        Observable measurements: {{ warning.sensor.observable_measurements }}
+        Observable alarming measurements: {{ warning.sensor.observable_alarming_measurements }}
+
+        {% for am in warning.alarming_measurements %}
+            {{ am.value }}{{ warning.sensor.type.unit }} (limit: {{ warning.limit }}{{ warning.sensor.type.unit }}) @ {{ am.local_read_ts_str() }}
+        {% endfor %}
+
+{% endfor %}

@@ -1,0 +1,28 @@
+{
+  "name": "FarmaTempApp",
+  "version": "1",
+  "authors": [
+    "Gregor R. <me@gregorratajc.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-toggle": "~2.1.0",
+    "bootstrap": "~3.3.2",
+    "bootswatch-dist": "cyborg",
+    "dat-gui": "https://github.com/dataarts/dat.gui.git#~0.5.1",
+    "espresso.js": "https://github.com/techlayer/espresso.js.git#~1.0.1",
+    "font-awesome": "https://github.com/FortAwesome/Font-Awesome.git#~4.2.0",
+    "highstock-release": "~2.0.4",
+    "jquery": "~2.1.3",
+    "moment": "~2.9.0",
+    "underscore": "~1.7.0"
+  }
+}

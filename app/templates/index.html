@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block extra_css %}
+    {% assets "fontawesome_css" %}
+        <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+    {% endassets %}
+{% endblock %}
+
+{% block extra_js %}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+    {% assets "highcharts_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    {% if config.SHOW_DEBUG_GUI == True %}
+        {% assets "datgui_js" %}
+            <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+        {% endassets %}
+        <script>
+            window.FarmaAppDebug = true;
+        </script>
+    {% endif %}
+{% endblock %}
+
+{% block extra_main_js %}
+    {% assets "dashboard_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block content %}
+
+    {% include 'calls.html' %}
+
+    {% include 'meter.html' %}
+
+    {% include 'relays.html' %}
+
+    {% include 'notifications.html' %}
+
+{% endblock %}

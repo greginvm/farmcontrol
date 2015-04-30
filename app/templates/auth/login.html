@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="login-overlay" class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">{{ _('Sign In') }}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="well">
+                            <form action="" method="post">
+                                {{ form.hidden_tag() }}
+                                {{ form.csrf_token }}
+                                <div class="form-group">
+                                    {{ form.email.label(class_="control-label") }}
+                                    {{ form.email(class_="form-control") }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form.password.label(class_="control-label") }}
+                                    {{ form.password(class_="form-control") }}
+                                </div>
+                                <br />
+                                {{ form.remember_me }}&nbsp;&nbsp;{{ form.remember_me.label }}
+                                <br />
+                                {{ form.charts_enabled }}&nbsp;&nbsp;{{ form.charts_enabled.label }}
+
+                                {{ form.submit(class_="btn btn-success btn-block") }}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

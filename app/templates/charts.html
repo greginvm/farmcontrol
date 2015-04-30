@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block extra_js %}
+    {% assets "highcharts_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block extra_main_js %}
+    {% assets "charts_js" %}
+        <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="main_chart" style="height: 700px; width: 100%; margin: 0 auto;">
+
+    </div>
+
+{% endblock %}

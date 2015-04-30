@@ -1,0 +1,87 @@
+{% block body %}
+
+<div class="row" >
+
+    <div class="col-xs-12" >
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title"> {{_('Notifications')}} </h4>
+            </div>
+            <div class="row" >
+
+                <div class="col-md-6 col-sm-12" >
+                    <ul class="list-group" data-ref="notification_list">
+
+                        <li class="list-group-item">
+                            <div data-ref="is_first">
+                                <i data-ref="icon"></i>
+                                <span data-ref="text"></span>
+                                <span class="badge" data-ref="badge"></span>
+                                <span class="badge" data-ref="time_ago"></span>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-12" >
+                    <ul class="list-group" data-ref="contact_list">
+
+                        <li class="list-group-item" >
+                            <div class="row">
+                                <div class="col-sm-3 col-xs-12">
+                                    <h5 data-ref="name"></h5>
+                                    <ul>
+                                        <li>{{ _('Last warning phone call was at') }}: <b data-ref="last_phone_call"></b></li>
+                                        <li>{{ _('Warning calls will be enabled after') }}: <b data-ref="next_available_phone_call"></b></li>
+                                        <li>{{ _('Warning wait minutes') }}: <i data-ref="call_wait_minutes_text"></i> min</li>
+                                    </ul>
+                                    <div class="col-xs-12" data-ref="enable_form">
+                                        <form>
+                                            <div class="form">
+                                                <div class="form-group-sm">
+                                                    <label>{{ _('Warning wait minutes') }}</label>
+                                                    <input type="number" step="1" min="1" data-ref="call_wait_minutes" class="form-control">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-xs-12" data-ref="open_edit">
+                                        <button type="button" class="btn btn-default btn-sm btn-block">{{ _('Edit') }}</button>
+                                    </div>
+                                    <div class="col-xs-6" data-ref="confirm_edit">
+                                        <button type="button" class="btn btn-success btn-sm btn-block">{{ _('Confirm') }}</button>
+                                    </div>
+                                    <div class="col-xs-6" data-ref="cancel_edit">
+                                        <button type="button" class="btn btn-warning btn-sm btn-block">{{ _('Cancel') }}</button>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 col-xs-12">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" data-ref="enable_sms_warnings"  data-toggle="toggle">
+                                        <span class="badge" data-ref="phone"></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-3 col-xs-12">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" data-ref="enable_phone_call_warnings"  data-toggle="toggle">
+                                        <span class="badge" data-ref="phone_call"></span>
+                                    </label>
+                                </div>
+                                <div class="col-sm-3 col-xs-12">
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" data-ref="enable_email_warnings"  data-toggle="toggle">
+                                        <div class="badge" data-ref="email"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

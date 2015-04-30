@@ -1,0 +1,37 @@
+i<nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">{{ _('Toggle navigation') }}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('dashboard.index') }}">Farma Nardi</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li {% if request.endpoint == 'dashboard.index' %} class='active' {% endif %}><a href="{{ url_for('dashboard.index') }}">{{ _('Dashboard') }}</a></li>
+                <li {% if request.endpoint == 'dashboard.charts' %} class='active' {% endif %}><a href="{{ url_for('dashboard.charts') }}">{{ _('History') }}</a></li>
+                <li {% if request.endpoint == 'admin.index' %} class='active' {% endif %}><a href="{{ url_for('admin.index') }}">{{ _('Setup') }}</a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        {{ current_user.email }}
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="{{ url_for('auth.logout') }}">{{ _('Log out') }}</a></li>
+                    </ul>
+                </li>
+                {% if pid is defined %}
+                    <li><a href="#">PID: {{ pid }}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+

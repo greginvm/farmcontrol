@@ -1,0 +1,35 @@
+
+{% block body %}
+
+<div class="row row-centered">
+    <div class="col-xs-12">
+        <div class="panel panel-default">
+            <div class="panel-heading clearfix">
+                <span class="panel-title pull-left">{{ _('Relays') }}</span>
+                <span class="pull-right">
+                    <input data-ref="toggle_relays_locked" data-toggle="toggle" data-on="{{ _('Unlocked') }}" data-off="{{ _('Locked') }}" type="checkbox">
+                </span>
+
+            </div>
+            <ul class="list-group list-inline text-center" data-ref="relay_list">
+                <li class="list-group-item" style="max-width: 200px;">
+
+                    <h6 data-ref="description" class="pull-left"></h6>
+                    <div class="btn-group pull-right" style="z-index: 9999; margin-left: -75px;">
+                        <button data-ref="refresh_state" type="button" class="btn btn-default fa fa-refresh"></button>
+                    </div>
+                    <div class="btn-group-vertical btn-block" role="group" aria-label="...">
+                        <button type="button" class="btn btn-block btn-md" style="margin-bottom: 8px;" data-ref="switch_on"></button>
+                        <button type="button" class="btn btn-block btn-md" data-ref="switch_off"></button>
+                    </div>
+                    <span data-ref="changed_ts"></span>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
