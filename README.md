@@ -1,14 +1,4 @@
 # Notes #
-
-This is a special release of my FarmControl project for Zemanta. 
-
-Some notes:
-
- - The app in currently not https enabled (the deployed app is used in local network)
- - The code listening to data on serial and sending data to the relay board is not separated from the app - should be
- - underscore.js is about to be removed and replaced with jQuery functions
- - js code is located in app/static/custom/
- - the app is a personal project so don't expect anything fancy, there are some shortcuts and some weird things (DB stuff) 
  
 The default user/pass: admin/admin
 
